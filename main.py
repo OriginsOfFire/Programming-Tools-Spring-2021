@@ -2,8 +2,8 @@ import numpy as np
 import random as rnd
 def main():
   size = rnd.randint(3, 7)
-  a = np.array(size, size)
-  b = np.array(size, size)
+  a = np.zeros(size)
+  b = np.zeros(size)
   
   for i in range(0, size):
     for j in range(0, size):
