@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="839d3e43-2c5d-4ff2-a087-e1a317f26910" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/serializer/objects/json_serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serializer/objects/pickle_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serializer/objects/toml_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serializer/objects/yaml_serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lab_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lab_2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serializer/objects/base_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/serializer/objects/base_serializer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -44,7 +45,8 @@
       <updated>1620110188399</updated>
       <workItem from="1620110189624" duration="1566000" />
       <workItem from="1620230639664" duration="85000" />
-      <workItem from="1620240616936" duration="2231000" />
+      <workItem from="1620240616936" duration="3415000" />
+      <workItem from="1620247688429" duration="377000" />
     </task>
     <servers />
   </component>
