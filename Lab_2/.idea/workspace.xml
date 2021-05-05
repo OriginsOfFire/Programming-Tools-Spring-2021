@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="839d3e43-2c5d-4ff2-a087-e1a317f26910" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/serializer/objects/json_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serializer/objects/pickle_serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serializer/objects/base_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/serializer/objects/base_serializer.py" afterDir="false" />
     </list>
@@ -42,7 +44,7 @@
       <updated>1620110188399</updated>
       <workItem from="1620110189624" duration="1566000" />
       <workItem from="1620230639664" duration="85000" />
-      <workItem from="1620240616936" duration="297000" />
+      <workItem from="1620240616936" duration="2231000" />
     </task>
     <servers />
   </component>

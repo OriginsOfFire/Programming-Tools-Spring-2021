@@ -1,4 +1,4 @@
-def object_to_dict(obj):
+def object_to_dict(obj: object):
     if not hasattr(obj, '__dict__'):
         return obj
     else:
@@ -16,10 +16,10 @@ def dict_to_object(dct, cls):
 
 
 class ISerializer:
-    def dumps(self, obj) -> str:
+    def dumps(self, obj: object) -> str:
         pass
 
-    def loads(self, s) -> object:
+    def loads(self, s: str) -> object:
         pass
 
 
@@ -27,11 +27,11 @@ class SerializerFactory:
     def get_serializer(self) -> ISerializer:
         pass
 
-    def dumps(self, obj) -> str:
+    def dumps(self, obj: object) -> str:
         serial = self.get_serializer()
         return serial.dumps(obj)
 
-    def loads(self, s, cls = None) -> object:
+    def loads(self, s: str, cls=None) -> object:
         serial = self.get_serializer()
         dct = serial.loads(s)
         if cls is not None:
@@ -39,13 +39,13 @@ class SerializerFactory:
         else:
             return dct
 
-    def dump(self, obj, path):
+    def dump(self, obj: object, path):
         s = self.dumps(obj)
         f = open(path, 'w')
         f.write(s)
         f.close()
 
-    def load(self, path, cls = None) -> object:
+    def load(self, path: str, cls=None) -> object:
         f = open(path, 'r')
         s = f.read()
         f.close()
