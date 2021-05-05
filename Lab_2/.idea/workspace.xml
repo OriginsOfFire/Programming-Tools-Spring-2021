@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="839d3e43-2c5d-4ff2-a087-e1a317f26910" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/serializer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serializer/objects/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serializer/objects/base_serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Lab_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lab_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab_2/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serializer/objects/base_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/serializer/objects/base_serializer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -55,7 +40,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620110188399</updated>
-      <workItem from="1620110189624" duration="297000" />
+      <workItem from="1620110189624" duration="1566000" />
+      <workItem from="1620230639664" duration="85000" />
+      <workItem from="1620240616936" duration="297000" />
     </task>
     <servers />
   </component>
@@ -72,5 +59,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

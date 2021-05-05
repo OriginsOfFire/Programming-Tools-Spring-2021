@@ -13,3 +13,40 @@ def dict_to_object(dct, cls):
     for elem in dict:
         setattr(obj, elem, dict[elem])
     return obj
+
+
+class ISerializer:
+    def dumps(self, obj) -> str:
+        pass
+
+    def loads(self, s) -> object:
+        pass
+
+
+class SerializerFactory:
+    def get_serializer(self) -> ISerializer:
+        pass
+
+    def dumps(self, obj) -> str:
+        serial = self.get_serializer()
+        return serial.dumps(obj)
+
+    def loads(self, s, cls = None) -> object:
+        serial = self.get_serializer()
+        dct = serial.loads(s)
+        if cls is not None:
+            return dict_to_object(dct, cls)
+        else:
+            return dct
+
+    def dump(self, obj, path):
+        s = self.dumps(obj)
+        f = open(path, 'w')
+        f.write(s)
+        f.close()
+
+    def load(self, path, cls = None) -> object:
+        f = open(path, 'r')
+        s = f.read()
+        f.close()
+        return self.loads(s, cls)
