@@ -1,10 +1,15 @@
-import PyYAML
+import yaml
 from serializer.objects.base_serializer import *
 
 
 class YamlSerializer(ISerializer):
     def dumps(self, obj: object) -> str:
-        return PyYAML.dumps(obj)
+        return yaml.dump(object_to_dict(), sort_keys=False)
 
     def loads(self, s: str) -> object:
-        return PyYAML.loads(s)
+        return yaml.full_load(s)
+
+
+class YamlFactory(SerializerFactory):
+    def get_serializer(self) -> ISerializer:
+        return YamlSerializer()

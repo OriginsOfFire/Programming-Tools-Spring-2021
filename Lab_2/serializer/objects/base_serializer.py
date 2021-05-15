@@ -10,7 +10,7 @@ def object_to_dict(obj: object):
 
 def dict_to_object(dct, cls):
     obj = cls()
-    for elem in dict:
+    for elem in dct:
         setattr(obj, elem, dict[elem])
     return obj
 
