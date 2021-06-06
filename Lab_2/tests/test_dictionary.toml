@@ -1,0 +1,13 @@
+a1 = 15
+a2 = 15.99
+a4 = 'hello, its me from A'
+a5 = [[15, 'hello'], [null, true], [-17, 299], false]
+a6 = true
+a7 = false
+
+[a3]
+b6 = 'tratatatata'
+
+[a3.b7]
+c1 = 15
+c2 = 'oraoraoraora'
