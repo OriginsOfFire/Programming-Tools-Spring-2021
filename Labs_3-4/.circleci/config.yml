@@ -1,0 +1,45 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image:
+    steps:
+      - checkout
+      - setup_remote_docker
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:TV0SwuSphd0F5xF/FfbDC46XOqQXVeMKFSPd/5mr8fc dimabeliy@MacBook-Pro-dima.local"
+      - run:
+          name: docker login and pull base images
+          command: |
+            docker login -u "${DOCKER_LOGIN}" -p "${DOCKER_PASSWORD}"
+      - run:
+          name: Build main images
+          command: |
+            docker build -t bot:app .
+            docker tag bot:app "${DOCKERHUB}/${APP_NAME}:bot.release"
+            docker push "${DOCKERHUB}/${APP_NAME}:bot.release"
+  test:
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Deploy changes
+          command: |
+            cmd="your_command"
+            eval $cmd
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

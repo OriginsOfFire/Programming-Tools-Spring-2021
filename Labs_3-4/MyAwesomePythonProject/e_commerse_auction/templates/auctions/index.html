@@ -1,0 +1,85 @@
+
+{% extends "auctions/home-layout.html" %}
+{% load static %}
+{% block body %}
+  
+  <!-- About-->
+    <section class="about-section text-center" id="about">
+      <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-lg-8">
+                  <h2 class="text-white mb-4">Greeting from Uganda </h2>
+                  <p class="text-white-50">
+
+                  </p>
+              </div>
+          </div>
+          <img class="img-fluid" src="{% static '/auctions/assets/img/logos.png' %}" alt="..." />
+      </div>
+  </section>
+  <section class="py-5" id="active_listings">
+    <div class="container">
+      <h1 class="mb-4">Active Listings</h1>
+        {% for listing in listings %}
+        <div class="mb-4 row listing-container">
+          <div class="col-md-2">
+            <img src="{{ listing.photo }}" alt="Photo of {{ listing.title }}" class="img-small">
+          </div>
+          <div class="col-md-10">
+            <h3><a href="{% url 'listing' listing.id %}">{{ listing.title }}</a></h3>
+            <h4>${{ listing.price }}</h4>
+            <p>{{ listing.description }}</p>
+            <p>Listed: {{ listing.date }}</p>
+            <p>Listed by: {{ listing.user.username }}</p>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </section>
+  <!-- Projects-->
+  <!-- Signup-->
+
+  <!-- Contact-->
+  <section class="contact-section bg-black">
+      <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5">
+              <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="card py-4 h-100">
+                      <div class="card-body text-center">
+                          <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                          <h4 class="text-uppercase m-0">Address</h4>
+                          <hr class="my-4 mx-auto" />
+                          <div class="small text-black-50">Belarus, Minsk</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="card py-4 h-100">
+                      <div class="card-body text-center">
+                          <i class="fas fa-envelope text-primary mb-2"></i>
+                          <h4 class="text-uppercase m-0">Email</h4>
+                          <hr class="my-4 mx-auto" />
+                          <div class="small text-black-50"><a href="#!">dima6789@icloud.com</a></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="card py-4 h-100">
+                      <div class="card-body text-center">
+                          <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                          <h4 class="text-uppercase m-0">Phone</h4>
+                          <hr class="my-4 mx-auto" />
+                          <div class="small text-black-50">+375(29)178-17-20</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="social d-flex justify-content-center">
+              <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+              <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+              <a class="mx-2" href="https://github.com/WinterInside1"><i class="fab fa-github"></i></a>
+          </div>
+      </div>
+  </section>
+
+{% endblock %}

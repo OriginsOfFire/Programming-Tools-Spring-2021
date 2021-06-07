@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  web:
+    image: "web-auction"
+    container_name: "web_auction"
+    build: MyAwesomePythonProject
+    command: sh -c "python3 manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./MyAwesomePythonProject/:/app/
+    ports:
+      - 8000:8000
+    env_file:
+      - MyAwesomePythonProject/.env.dev
+  postgres:
+    image: postgres:12.0-alpine
+    container_name: "postgres_test"
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"
+    env_file:
+       - MyAwesomePythonProject/.env.dev
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:
